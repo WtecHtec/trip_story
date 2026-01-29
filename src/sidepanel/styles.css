@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #1d9bf0;
+    --bg-color: #ffffff;
+    --text-color: #0f1419;
+    --border-color: #eff3f4;
+    --secondary-text: #536471;
+    --hover-bg: #f7f9f9;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.view {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Account View Styles */
+.input-group {
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#account-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#add-account-btn,
+#fetch-tweets-btn,
+#send-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#add-account-btn:hover,
+#fetch-tweets-btn:hover,
+#send-btn:hover {
+    opacity: 0.9;
+}
+
+#send-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#account-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.account-name {
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #f4212e;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Tweet View Styles */
+.tweet-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border-color);
+    background: #fff;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.actions-toolbar {
+    padding: 8px 12px;
+    background: #f7f9f9;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tweet-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tweet-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 10px;
+}
+
+.tweet-content {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.tweet-meta {
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+    margin-top: 4px;
+}
+
+#api-result {
+    padding: 12px;
+    background: #f0f0f0;
+    border-top: 1px solid var(--border-color);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* New Styles for Iteration 1 */
+.toolbar-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+#toggle-tweets-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--secondary-text);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.tweet-stats {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.collapsed {
+    display: none !important;
+}
