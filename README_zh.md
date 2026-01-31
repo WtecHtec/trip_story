@@ -2,6 +2,8 @@
 
 [English](README.md) | [中文](README_zh.md)
 
+[演示](https://www.bilibili.com/video/BV13m61BJEf3/?share_source=copy_web&vd_source=b38d30b9afa4cdb7d6538c4c2978a4c8)
+
 TripStory 是一个 AI 驱动的旅行助手应用，旨在创造沉浸式的旅行体验。它结合了智能路线规划、风格化打卡照生成以及沿途风光视频搜索功能，帮助用户虚拟探索并规划他们的旅程。
 
 ## 简介
