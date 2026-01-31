@@ -2,6 +2,8 @@
 
 [English](README.md) | [中文](README_zh.md)
 
+[view](https://www.bilibili.com/video/BV13m61BJEf3/?share_source=copy_web&vd_source=b38d30b9afa4cdb7d6538c4c2978a4c8)
+
 TripStory is an AI-powered travel assistant application that creates immersive travel experiences. It combines intelligent route planning, style-transfer check-in photos, and scenic video search to help users virtually explore and plan their trips.
 
 ## Introduction
