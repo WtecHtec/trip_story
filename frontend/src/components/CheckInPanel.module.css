@@ -1,0 +1,287 @@
+.panel {
+    width: 380px;
+    height: 100%;
+    background: var(--color-bg-card);
+    backdrop-filter: var(--glass-blur);
+    border-right: var(--glass-border);
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text-main);
+    transition: var(--transition-smooth);
+    z-index: 10;
+    overflow-y: auto;
+    position: relative;
+    /* For absolute children like Album */
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.locationTitle {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.city {
+    color: var(--color-text-dim);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: var(--glass-border);
+    box-shadow: var(--shadow-glow);
+}
+
+.scenicImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.scenicImage:hover {
+    transform: scale(1.05);
+}
+
+.actionArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.uploadSection {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: var(--glass-border);
+}
+
+.btnPrimary {
+    background: linear-gradient(135deg, var(--color-primary), #4f46e5);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btnPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+.btnPrimary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btnSecondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.fileInput {
+    margin: 1rem 0;
+    color: var(--color-text-dim);
+}
+
+.resultImageContainer {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid var(--color-accent);
+}
+
+.resultImage {
+    width: 100%;
+    display: block;
+}
+
+.btnGroup {
+    display: flex;
+    z-index: 2100;
+    /* Ensure it's above everything details */
+}
+
+/* Ensure Result Section doesn't break layout */
+.resultSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.uploadLabel {
+    display: inline-block;
+    padding: 0.8rem 0rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.uploadLabel:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #00d7ff;
+    color: #00d7ff;
+}
+
+.albumButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+.styledInput {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.styledInput:focus {
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Ensure global scrollbar styling for the panel too */
+/* Ensure global scrollbar styling for the panel content */
+.scrollableContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollableContent::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollableContent::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.scrollableContent::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+
+.galleryContainer {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) transparent;
+}
+
+.galleryContainer::-webkit-scrollbar {
+    height: 6px;
+}
+
+.galleryContainer::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
+}
+
+.galleryThumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.galleryThumbnail:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.galleryThumbnail.selected {
+    border-color: var(--color-accent);
+    opacity: 1;
+    box-shadow: 0 0 10px var(--color-accent);
+}
